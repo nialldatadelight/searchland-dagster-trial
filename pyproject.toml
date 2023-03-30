@@ -1,6 +1,37 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
 [tool.dagster]
-module_name = "quickstart_gcp"
+module_name = "listings"
+
+[tool.poetry]
+name = "searchland-dagster-trial"
+version = "0.1.0"
+description = ""
+authors = ["Niall Brickell <6999342+NiallBrickell@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "searchland_dagster_trial"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dagster = "^1.2.3"
+dagster-gcp = "^0.18.3"
+dagster-cloud = "^1.2.3"
+boto3 = "^1.26.101"
+google-auth = "^2.17.0"
+pandas = "^1.5.3"
+pandas-gbq = "^0.19.1"
+requests = "^2.28.2"
+lxml = "^4.9.2"
+beautifulsoup4 = "^4.12.0"
+dbt-core = "^1.4.5"
+dagster-dbt = "^0.18.3"
+dbt-bigquery = "^1.4.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+dagit = "^1.2.3"
+pytest = "^7.2.2"
+
+[build-system]
+requires = ["poetry-core", "setuptools"]
+build-backend = "setuptools.build_meta"

@@ -1,4 +1,4 @@
 locations:
-- code_source:
-    package_name: quickstart_gcp
-  location_name: searchland-trial
+  - code_source:
+      package_name: listings
+    location_name: searchland-trial

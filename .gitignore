@@ -1,0 +1,6 @@
+.venv
+tmp*
+media
+__pycache__
+.DS_Store
+logs
